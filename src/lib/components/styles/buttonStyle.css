@@ -1,0 +1,310 @@
+.default-btn{
+	width: 220px;
+	height: 50px;
+	border-radius: 10px;
+	background-color: #007bff;
+	color:white;
+	font-size: 12px;
+	letter-spacing: 2px	;
+	text-transform: uppercase;
+}
+
+.default-btn:hover{
+	background-color: #0069d9;
+}
+
+.default-btn:active{
+	transform: scale(0.9);
+}
+
+/*
+---------------------------
+1.Glow on Hover Button
+---------------------------
+*/
+.glow-btn{
+ 	width: 220px;
+    height: 50px;
+    border: none;
+    outline: none;
+    color: #fff;
+    background: #111;
+    cursor: pointer;
+    position: relative;
+    z-index: 0;
+    border-radius: 10px;
+    text-transform: uppercase;
+}
+
+.glow-btn:before{
+	 content: '';
+    background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000);
+    position: absolute;
+    top: -2px;
+    left:-2px;
+    background-size: 400%;
+    z-index: -1;
+    filter: blur(5px);
+    width: calc(100% + 4px);
+    height: calc(100% + 4px);
+    animation: glowing 20s linear infinite;
+    opacity: 0;
+    transition: opacity .3s ease-in-out;
+    border-radius: 10px;
+    font-weight: 600;
+}
+
+.glow-btn:active{
+	
+	transform:scale(0.9);
+
+}
+.glow-btn:active:after{
+	background-color: transparent;
+
+}
+
+.glow-btn:hover:before{
+	opacity: 1;
+
+}
+.glow-btn:after{
+	z-index: -1;
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    border-radius: 10px;
+}
+
+@keyframes glowing {
+    0% { background-position: 0 0; }
+    50% { background-position: 400% 0; }
+    100% { background-position: 0 0; }
+}
+
+
+/*
+---------------------------
+2.slide on Hover
+---------------------------
+*/
+
+.slide-btn {
+	 display: inline-block;
+	 padding: 0.75rem 1.25rem;
+	 border-radius: 10rem;
+	 color: #fff;
+	 text-transform: uppercase;
+	 font-size: 1rem;
+	 letter-spacing: 0.15rem;
+	 transition: all 0.3s;
+	 position: relative;
+	 overflow: hidden;
+	 z-index: 1;
+	 border: 0px;
+}
+ .slide-btn:after {
+	 content: '';
+	 position: absolute;
+	 bottom: 0;
+	 left: 0;
+	 width: 100%;
+	 height: 100%;
+	 background-color: #0cf;
+	 border-radius: 10rem;
+	 z-index: -2;
+}
+ .slide-btn:before {
+	 content: '';
+	 position: absolute;
+	 bottom: 0;
+	 left: 0;
+	 width: 0%;
+	 height: 100%;
+	 background-color: #008fb3;
+	 transition: all 0.3s;
+	 border-radius: 10rem;
+	 z-index: -1;
+}
+ .slide-btn:hover {
+	 color: #fff;
+
+}
+ .slide-btn:hover:before {
+	 width: 100%;
+}
+
+.slide-btn:active{
+	transform: scale(0.9);
+}
+
+/*
+---------------------------
+3. 3d animation button
+---------------------------
+*/
+
+.animate-press{
+  color:white;
+  font-family:Helvetica, sans-serif;
+  font-weight:bold;
+  font-size:16px;
+  text-align: center;
+  text-decoration:none;
+  background-color:#FFA12B;
+  display:inline-block;
+  position:relative;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  text-shadow: 0px 1px 0px #000;
+  filter: dropshadow(color=#000, offx=0px, offy=1px);
+  -webkit-box-shadow:inset 0 1px 0 #FFE5C4, 0 10px 0 #915100;
+  -moz-box-shadow:inset 0 1px 0 #FFE5C4, 0 10px 0 #915100;
+  box-shadow:inset 0 1px 0 #FFE5C4, 0 10px 0 #915100;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  width: 220px;
+  height: 40px;
+}
+
+.animate-press:active{
+  top:10px;
+  background-color:#F78900;
+  -webkit-box-shadow:inset 0 1px 0 #FFE5C4, inset 0 -3px 0 #915100;
+  -moz-box-shadow:inset 0 1px 0 #FFE5C4, inset 0 -3pxpx 0 #915100;
+  box-shadow:inset 0 1px 0 #FFE5C4, inset 0 -3px 0 #915100;
+}
+
+.animate-press:after{
+  content:"";
+  height:100%;
+  width:100%;
+  padding:4px;
+  position: absolute;
+  bottom:-15px;
+  left:-4px;
+  z-index:-1;
+  background-color:#2B1800;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+}
+.animate-press:active:after{
+  position: absolute;
+  bottom:-5px;
+  left:-4px;
+}
+
+/*
+---------------------------
+4.thin line button
+---------------------------
+*/
+
+
+.thin-btn{
+	background-color: white;
+/*	border:0px;*/
+	width: 220px;
+	height: 50px;
+	border-radius: 30px;
+	text-transform: uppercase;
+}
+
+.btn-white:hover {
+	
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.thin-btn:active {
+    transform: translateY(0px);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+
+}
+.thin-btn:after {
+    content: "";
+    display: inline-block;
+    /*height: 100%;
+    width: 100%;*/
+    border-radius: 100px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    transition: all .4s;
+}
+
+.btn-white {
+    background-color: #fff;
+    color: #777;
+    font-weight: 700;
+}
+
+.btn-white:after {
+    background-color: #fff;
+}
+.btn-animated {
+    animation: moveInBottom 5s ease-out;
+    animation-fill-mode: backwards;
+}
+
+@keyframes moveInBottom {
+    0% {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
+
+/*
+------------------------------
+5.swipe right button
+------------------------------
+*/
+
+.swipe-btn{
+  display: inline-block;
+  border-radius: 5px;
+  width: 200px;
+  height: 40px;
+  line-height: 40px;
+  font-size: 13px;
+  font-family: sans-serif;
+  text-decoration: none;
+  color: #333;
+  border: 2px solid #333;
+  letter-spacing: 2px;
+  text-align: center;
+  position: relative;
+  transition: all .35s;
+  text-transform: uppercase;
+}
+
+.swipe-btn:after{
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 100%;
+  background: #ff003b;
+  transition: all .35s;
+  color:white;
+}
+.swipe-btn:active{
+  transform: scale(0.9);
+}
+.swipe-btn:hover:after{
+	transition: .5s;
+	content: "click here";
+  width: 100%;
+}
+
