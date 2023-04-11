@@ -4,7 +4,6 @@ import "./styles/FlushButton.css";
 
 const FlushButtons=({type,className,style,isDisabled,value,onPress})=>{
   const disableBtn = isDisabled?"btn-disable":"btn-normal"
-  
 	const NewclassName=className;
     return(
         
