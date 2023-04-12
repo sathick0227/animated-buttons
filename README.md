@@ -8,6 +8,16 @@ You can install this package using npm:
 ```bash
 npm install animated-buttons
 ```
+## Components
+There is 5 types of Buttons Components available
+```bash
+<Button/>
+<BlobButton/>
+<FlushButton/>
+<HoverButton/>
+<DeleteButton/>
+```
+## Demo
 
 ## Usage
 To use this component in your React app, simply import it and render it:
@@ -33,16 +43,18 @@ style={}
 type={}
 value={}
 isDisabled={}
+onPress={}
 />
 ```
 
-Props | Datatype | required*| Default Value|
----|---|---|---|
-className | String | No | "default-btn" |
-style | string  | No | none |
-type | string | No | "submit" |
-value | string | yes | none |
-isDisabled | boolean | No | yes
+Props | Datatype |
+---|---|
+className | String |
+style | string  |
+type | string |
+value | string |
+isDisabled | boolean |
+onPress | function  |
 
 
 ### Contributing
