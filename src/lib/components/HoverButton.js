@@ -1,5 +1,5 @@
 import React from "react";
-import "./textButton.css";
+import "./styles/HoverButton.css";
 
 const HoverButton=({type,className,style,hoverColor,isDisabled,value,onPress})=>{
   const disableBtn = isDisabled?"btn-disabled":"btn-normal"
